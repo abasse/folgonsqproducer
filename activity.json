@@ -1,0 +1,37 @@
+{
+  "name": "nsqproducer",
+  "type": "flogo:activity",
+  "ref": "/github.com/abasse/folgonsqproducer",
+  "version": "0.0.1",
+  "title": "NSQ Producer",
+  "description": "Create a message under a topic in NSQ",
+  "homepage": "https://github.com/abasse/folgonsqproducer",
+    "inputs":[
+      {
+        "name": "NsqdTcpAddress",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "NsqdHttpAddress",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "Topic",
+        "type": "string",
+        "required": true
+      },
+      {
+        "name": "Message",
+        "type": "string",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "type": "string"
+      }
+    ]
+}
