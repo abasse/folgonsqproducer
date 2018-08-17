@@ -29,9 +29,5 @@
       }
     ],
     "outputs": [
-      {
-        "name": "result",
-        "type": "string"
-      }
     ]
 }

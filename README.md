@@ -36,10 +36,6 @@ Inputs and Outputs:
     }
   ],
   "outputs": [
-    {
-      "name": "result",
-      "type": "string"
-    }
   ]
 }
 ```

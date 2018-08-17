@@ -7,7 +7,7 @@ import (
 )
 
 // activityLog is the default logger for the exec Activity
-var log = logger.GetLogger("activity-tibco-executecmd")
+var log = logger.GetLogger("activity-tibco-folgonsqproducer")
 
 type NsqpActivity struct {
 	metadata *activity.Metadata
@@ -30,14 +30,10 @@ func (a *NsqpActivity) Eval(context activity.Context) (done bool, err error) {
 	topic, _ := context.GetInput("Topic").(string)
 	message, _ := context.GetInput("Message").(string)
 
-	log.Info("Topic:", topic)
-	log.Info("Message:", message)
-
 	producer := newProducer(NsqdTcpAddress, NsqdHttpAddress)
 
 	producer.Publish(topic, []byte(message))
-
-	context.SetOutput("result", "published")
+	log.Info("Published message")
 
 	return true, nil
 }
