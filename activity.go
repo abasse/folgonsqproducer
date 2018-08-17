@@ -1,4 +1,4 @@
-package nsqproducer
+package folgonsqproducer
 
 import (
 	"github.com/TIBCOSoftware/flogo-lib/core/activity"

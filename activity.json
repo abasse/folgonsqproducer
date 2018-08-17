@@ -1,5 +1,5 @@
 {
-  "name": "nsqproducer",
+  "name": "folgonsqproducer",
   "type": "flogo:activity",
   "ref": "github.com/abasse/folgonsqproducer",
   "version": "0.0.1",
