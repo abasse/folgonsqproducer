@@ -1,7 +1,7 @@
 {
   "name": "nsqproducer",
   "type": "flogo:activity",
-  "ref": "/github.com/abasse/folgonsqproducer",
+  "ref": "github.com/abasse/folgonsqproducer",
   "version": "0.0.1",
   "title": "NSQ Producer",
   "description": "Create a message under a topic in NSQ",
