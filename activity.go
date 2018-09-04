@@ -8,6 +8,7 @@ import (
 
 // activityLog is the default logger for the exec Activity
 var log = logger.GetLogger("activity-tibco-folgonsqproducer")
+var producer = newProducer("127.0.0.1:4150", "127.0.0.1:4151")
 
 type NsqpActivity struct {
 	metadata *activity.Metadata
@@ -25,12 +26,8 @@ func (a *NsqpActivity) Metadata() *activity.Metadata {
 
 func (a *NsqpActivity) Eval(context activity.Context) (done bool, err error) {
 
-	NsqdTcpAddress, _ := context.GetInput("NsqdTcpAddress").(string)
-	NsqdHttpAddress, _ := context.GetInput("NsqdHttpAddress").(string)
 	topic, _ := context.GetInput("Topic").(string)
 	message, _ := context.GetInput("Message").(string)
-
-	producer := newProducer(NsqdTcpAddress, NsqdHttpAddress)
 
 	producer.Publish(topic, []byte(message))
 	log.Info("Published message")

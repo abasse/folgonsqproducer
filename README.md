@@ -15,16 +15,6 @@ Inputs and Outputs:
 {
   "inputs":[
     {
-      "name": "NsqdTcpAddress",
-      "type": "string",
-      "required": true
-    },
-    {
-      "name": "NsqdHttpAddress",
-      "type": "string",
-      "required": true
-    },
-    {
       "name": "Topic",
       "type": "string",
       "required": true
